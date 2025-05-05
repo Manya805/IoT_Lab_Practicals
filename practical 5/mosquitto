@@ -1,0 +1,16 @@
+Publisher:
+mosquitto_pub -h localhost -t mahakumbh/crowd/zone1 -m "Heavy crowd detected!"
+mosquitto_pub -h localhost -t mahakumbh/emergency/medical -m "Need ambulance at Zone 2"
+mosquitto_pub -h localhost -t mahakumbh/lostfound -m "Lost child at gate 5"
+
+Subscriber:
+mosquitto_sub -h localhost -t mahakumbh/crowd/zone1
+mosquitto_sub -h localhost -t mahakumbh/emergency/medical 
+mosquitto_sub -h localhost -t mahakumbh/lostfound 
+
+Broker:
+mosquito
+mosquito -v
+
+All messages:
+mosquitto_sub -h localhost -t "mahakumbh/+"
