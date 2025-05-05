@@ -1,0 +1,9 @@
+npm install -g --unsafe -perm node-red
+
+In first  : mosquitto_sub -t test/topic
+In second : mosquitto_pub -t test/topic -m "Hi"
+
+
+Connect Inject Node → MQTT OUT Node.
+
+Connect MQTT IN Node → Debug Node.
